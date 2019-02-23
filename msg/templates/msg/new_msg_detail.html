@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    {{ msg.created_time }}综合信息情况
+{% endblock %}
+
+{% block nav_msg_active %}active{% endblock %}
+
+{% block header_extends %}
+    <link rel="stylesheet" href="{% static 'new_list.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="table-responsive">
+        <table class="table table-condensed">
+            <thead>
+            <tr class="active">
+                <th>创建时间</th>
+                <th>信息类别</th>
+                <th>指挥长</th>
+                <th>指挥长电话</th>
+                <th>值班长</th>
+                <th>值班长电话</th>
+                <th>值班员</th>
+                <th>值班员电话</th>
+                <th>在册民警</th>
+                <th>值班民警</th>
+                <th>应急民警</th>
+                <th>应急车辆</th>
+                <th>外系统（省）调入新收罪犯</th>
+                <th>出工人数</th>
+                <th>集训全监总数</th>
+                <th>集训当日发生</th>
+                <th>禁闭全监总数</th>
+                <th>禁闭当日发生</th>
+                <th>隔离审查全监总数</th>
+                <th>隔离审查当日发生</th>
+                <th>罪犯死亡</th>
+                <th>离监就医当日返监</th>
+                <th>司法医院住院全监总数</th>
+                <th>司法医院住院当日发生</th>
+                <th>社会医院住院全监总数</th>
+                <th>社会医院住院当日发生</th>
+                <th>刑满释放</th>
+                <th>假释出监</th>
+                <th>解回再审</th>
+                <th>暂予监外执行</th>
+                <th>监外执行罪犯死亡</th>
+                <th>特许离监</th>
+                <th>离监探亲全监总数</th>
+                <th>离监探亲当日发生</th>
+                <th>外来人员进监</th>
+                <th>外来车辆进监</th>
+                <th>视频事件报警</th>
+                <th>周界报警</th>
+                <th>电网报警</th>
+                <th>违规违纪信息</th>
+                <th>罪犯出监信息</th>
+                <th>其他重要信息</th>
+                <th>突发事件</th>
+                <th>处置状态</th>
+                <th>最后修改时间</th>
+                <th>操作员</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="创建时间">{{ msg.created_time|date:'Y-m-d' }}</td>
+                <td data-label="信息类别">
+                    <a href="{% url 'msg_whit_type' msg.msg_type.pk %}">
+                        {{ msg.msg_type }}
+                    </a>
+                </td>
+                <td data-label="指挥长">{{ msg.commander }}</td>
+                <td data-label="指挥长电话">{{ msg.commander_phone }}</td>
+                <td data-label="值班长">{{ msg.chief_duty }}</td>
+                <td data-label="值班长电话">{{ msg.chief_phone }}</td>
+                <td data-label="值班员"></td>
+                <td data-label="值班员电话"></td>
+                <td data-label="在册民警">{{ msg.police_duty }}</td>
+                <td data-label="值班民警">{{ msg.police_post }}</td>
+                <td data-label="应急民警">{{ msg.emergency_police }}</td>
+                <td data-label="应急车辆">{{ msg.emergency_vehicle }}</td>
+                <td data-label="外系统（省）调入新收罪犯">{{ msg.external_transfer }}</td>
+                <td data-label="出工人数">{{ msg.num_workers }}</td>
+                <td data-label="集训全监总数">{{ msg.training_all }}</td>
+                <td data-label="集训当日发生">{{ msg.training_day }}</td>
+                <td data-label="禁闭全监总数">{{ msg.confinement_all }}</td>
+                <td data-label="禁闭当日发生">{{ msg.confinement_day }}</td>
+                <td data-label="隔离审查全监总数">{{ msg.isolation_all }}</td>
+                <td data-label="隔离审查当日发生">{{ msg.isolation_day }}</td>
+                <td data-label="罪犯死亡">{{ msg.death }}</td>
+                <td data-label="离监就医当日返监">{{ msg.leave_and_back }}</td>
+                <td data-label="司法医院住院全监总数">{{ msg.judicial_all }}</td>
+                <td data-label="司法医院住院当日发生">{{ msg.judicial_day }}</td>
+                <td data-label="社会医院住院全监总数">{{ msg.social_all }}</td>
+                <td data-label="社会医院住院当日发生">{{ msg.social_day }}</td>
+                <td data-label="刑满释放">{{ msg.freed_people }}</td>
+                <td data-label="假释出监">{{ msg.parole }}</td>
+                <td data-label="解回再审">{{ msg.reconfirm }}</td>
+                <td data-label="暂予监外执行">{{ msg.outside_prison }}</td>
+                <td data-label="监外执行罪犯死亡">{{ msg.outside_prison_death }}</td>
+                <td data-label="特许离监">{{ msg.charter }}</td>
+                <td data-label="离监探亲全监总数">{{ msg.detective_relatives_all }}</td>
+                <td data-label="离监探亲当日发生">{{ msg.detective_relatives_day }}</td>
+                <td data-label="外来人员进监">{{ msg.police_on_post }}</td>
+                <td data-label="外来车辆进监">{{ msg.exotic_vehicle }}</td>
+                <td data-label="视频事件报警">{{ msg.video_alarm }}</td>
+                <td data-label="周界报警">{{ msg.perimeter_alarm }}</td>
+                <td data-label="电网报警">{{ msg.grid_alarm }}</td>
+                <td data-label="违规违纪信息">{{ msg.violation_msg }}</td>
+                <td data-label="罪犯出监信息">{{ msg.leave_prison_msg }}</td>
+                <td data-label="其他重要信息">{{ msg.important_msg }}</td>
+                <td data-label="突发事件">{{ msg.emergencies_msg }}</td>
+                <td data-label="处置状态">{{ msg.disposal_msg }}</td>
+                <td data-label="最后修改时间">{{ msg.last_updated_time|date:'Y-m-d H:d:s' }}</td>
+                <td data-label="操作员">{{ msg.Operator }}</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+{% endblock %}

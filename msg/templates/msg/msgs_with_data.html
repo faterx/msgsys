@@ -1,0 +1,11 @@
+{% extends 'msg/msg_list.html' %}
+
+{% block title %}
+{{ msg_type.typename }}
+{% endblock %}
+
+{% block msg_list_title %}
+    日期归档：{{ msgs_with_date }}数据 &nbsp;&nbsp;
+    <a href="{% url 'msg_list' %}">查看信息摘要</a>
+{% endblock %}
+

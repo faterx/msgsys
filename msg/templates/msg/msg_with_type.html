@@ -1,0 +1,20 @@
+{% extends 'msg/msg_list.html' %}
+
+{% block title %}
+{{ msg_type.typename }}
+{% endblock %}
+
+{% block msg_list_title %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-xs-offset-0">
+                <form action="">
+                    {% csrf_token %}
+                    {{ get_append_form.as_table }}
+                </form>
+                <input class="btn btn-primary" type="submit" value="保存" />
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

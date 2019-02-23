@@ -1,0 +1,53 @@
+{# django自带的方法：#}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {#bootstrip的meta信息设置#}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {# 屏幕自适应 #}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {# <link rel="stylesheet" href="/static/css/base.css">#}
+    {# django自带的方法: #}
+{#    <link rel="stylesheet" href="{% static 'css/../static/base.css' %}">#}
+    <link rel="stylesheet" href="{% static 'bootstrap-3.37/css/bootstrap.min.css' %}">
+    <script type="text/javascript" src="{% static 'bootstrap-3.37/js/jquery-1.12.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap-3.37/js/bootstrap.min.js' %}"></script>
+    {% block header_extends %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar navbar-default " role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="{% url 'home' %}" class="navbar-brand">综合信息系统</a>
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div id="navbar-collapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="{% block nav_home_active %}{% endblock %}">
+                        <a href="{% url 'home' %}">首页</a>
+                    </li>
+                    <li class="{% block nav_msg_active %}{% endblock %}" >
+                        <a href="{%  url 'msg_list' %}">查找数据</a>
+                    </li>
+                    <li>
+                        <a href="http://10.1.48.250:8080/asqbxx">情报系统</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block content %}{% endblock %}
+    {% block script_extends %}{% endblock %}
+
+</body>
+</html>

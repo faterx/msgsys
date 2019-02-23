@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}综合信息平台--首页{% endblock %}
+
+{% block nav_msg_active %}active{% endblock %}
+
+{% block header_extends %}
+    <link rel="stylesheet" href="{% static 'msg.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {% block msg_list_title %}
+                            信息摘要&nbsp;（请点击日期标题查看详细内容）
+                            <a class="btn btn-primary" href="{% url 'add' %}?from={{ request.get_full_path }}">
+                                添加数据
+                            </a>
+                        {% endblock %}
+                    </div>
+                    <table class="table table-hover table-striped active">
+                            <thead>
+                                <tr>
+                                    <th style="display:table-cell; vertical-align:middle; text-align: center;">日期</th>
+                                    <th style="display:table-cell; vertical-align:middle; text-align: center;">违规违纪信息</th>
+                                    <th style="display:table-cell; vertical-align:middle; text-align: center;">罪犯出监信息</th>
+                                    <th style="display:table-cell; vertical-align:middle; text-align: center;">其他重要信息</th>
+                                    <th style="display:table-cell; vertical-align:middle; text-align: center;">突发事件</th>
+                                    <th style="display:table-cell; vertical-align:middle; text-align: center;">处置状态</th>
+                                    <th style="display:table-cell; vertical-align:middle; text-align: center;">指挥长</th>
+                                </tr>
+                            </thead>
+
+                            {% for msg in msgs %}
+                                <tbody>
+                                    <tr>
+                                        <td style="display:table-cell; vertical-align:middle; text-align: center;">
+                                            <a href="{% url 'msg_detail' msg.pk %}">
+                                                {{ msg.created_time|date:'Y-m-d' }}
+                                            </a>
+                                        </td>
+                                        <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.violation_msg|striptags|truncatechars:35 }}</td>
+                                        <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.leave_prison_msg|striptags|truncatechars:35 }}</td>
+                                        <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.important_msg|striptags|truncatechars:35 }}</td>
+                                        <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.emergencies_msg|striptags|truncatechars:35 }}</td>
+                                        <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.disposal_msg|striptags|truncatechars:35 }}</td>
+                                        <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.commander }}</td>
+                                    </tr>
+                                </tbody>
+                                {% empty %}
+                                    <div class="msg">
+                                        <h3>-- 暂无数据！请添加 --</h3>
+                                    </div>
+                                {% endfor %}
+                        </table>
+                </div>
+                <div class="paginator">
+                    <ul class="pagination">
+                        <li>
+                            {# 判断是否存在上一页 #}
+                            {% if page_of_msgs.has_previous %}
+                                <a href="?page={{ page_of_msgs.previous_page_number }}" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            {% else %}
+                                <span aria-hidden="true">&laquo;</span>
+                            {% endif %}
+                        </li>
+
+                        {# 全部页码 #}
+                        {% for page_num in page_range %}
+                            {% if page_num == page_of_msgs.number %}
+                                <li class="active"><span>{{ page_num }}</span></li>
+                            {% else %}
+                                {% if page_num == '...' %}
+                                    <li><span>{{ page_num }}</span></li>
+                                {% else %}
+                                    <li><a href="?page={{ page_num }}">{{ page_num }}</a></li>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+
+                        <li>
+                            {# 判断是否存在上一页 #}
+                            {% if page_of_msgs.has_next %}
+
+                                <a href="?page={{ page_of_msgs.next_page_number }}" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            {% else %}
+                                <span aria-hidden="true">&raquo;</span>
+                            {% endif %}
+                        </li>
+                    </ul>
+                    <p>
+                        目前共录有{{ page_of_msgs.paginator.count }}条数据，
+                        当前第{{ page_of_msgs.number }}页，
+                        共{{ page_of_msgs.paginator.num_pages }}页
+                    </p>
+                </div>
+            </div>
+            <div class="hidden-xs col-sm-4 col-md-3 col-lg-3">
+{#                <div class="panel panel-default">#}
+{#                    <div class="panel-heading">#}
+{#                        信息类别#}
+{#                    </div>#}
+{#                    <div class="panel-body">#}
+{#                        <ul class="msg-types">#}
+{#                            {% for msg_type in msg_types %}#}
+{#                                <li>#}
+{#                                    <a href="{% url 'msg_whit_type' msg_type.pk %}">#}
+{#                                        {{ msg_type.type_name }}&nbsp;({{ msg_type.msg_count }})#}
+{#                                    </a>#}
+{#                                </li>#}
+{#                            {% empty %}#}
+{#                                <li>#}
+{#                                    暂无分类信息#}
+{#                                </li>#}
+{#                            {% endfor %}#}
+{#                        </ul>#}
+{#                    </div>#}
+{#                </div>#}
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        日期分类
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            {% for msg_date, msg_count in msg_dates.items %}
+                                <li style="list-style-type:none;">
+                                    <a href="{% url 'msgs_with_data' msg_date.year msg_date.month %}">
+                                        {{ msg_date|date:'Y年m月' }}&nbsp;({{ msg_count }})
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

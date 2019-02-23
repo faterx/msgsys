@@ -1,0 +1,765 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html lang="zh-hans" >
+<head>
+<title>增加 msg | Django 站点管理员</title>
+<link rel="stylesheet" type="text/css" href="{% static 'admin/css/base.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'admin/css/forms.css' %}">
+
+
+<script type="text/javascript" src="/admin/jsi18n/"></script>
+<script type="text/javascript" src="/static/admin/js/vendor/jquery/jquery.js"></script>
+<script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+<script type="text/javascript" src="/static/admin/js/core.js"></script>
+<script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script type="text/javascript" src="/static/admin/js/actions.js"></script>
+<script type="text/javascript" src="/static/admin/js/urlify.js"></script>
+<script type="text/javascript" src="/static/admin/js/prepopulate.js"></script>
+<script type="text/javascript" src="/static/admin/js/vendor/xregexp/xregexp.js"></script>
+<script type="text/javascript" src="/static/admin/js/calendar.js"></script>
+<script type="text/javascript" src="/static/admin/js/admin/DateTimeShortcuts.js"></script>
+<script type="text/javascript" src="/static/ckeditor/ckeditor-init.js" data-ckeditor-basepath="/static/ckeditor/ckeditor/" id="ckeditor-init-script"></script>
+<script type="text/javascript" src="/static/ckeditor/ckeditor/ckeditor.js"></script>
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+
+<body class=" app-msg model-msg change-form"
+  data-admin-utc-offset="28800">
+
+<!-- Container -->
+<div id="container">
+    
+<div class="breadcrumbs">
+<a href="/admin/">首页</a>
+&rsaquo; <a href="/admin/msg/">Msg</a>
+&rsaquo; <a href="/admin/msg/msg/">Msgs</a>
+&rsaquo; 增加 msg
+</div>
+    <!-- Content -->
+    <div id="content" class="colM">
+        <h1>新增数据</h1>
+        <div id="content-main">
+    <form action="" method="post" id="msg_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="yQdhYL8QeERRPopFUaNJwCNVCtQvWkvwR33DtiVXOSKQ8BDRScGFMsIB1CJ3NFnc">
+    <div>
+        <fieldset class="module aligned ">
+            <div class="form-row field-msg_type">
+
+
+                    <div>
+
+
+                            <label class="required" for="id_msg_type">Msg type:</label>
+
+                                <div class="related-widget-wrapper">
+            <select name="msg_type" required id="id_msg_type">
+            <option value="" selected>---------</option>
+
+            <option value="1">异常</option>
+
+            <option value="2">正常</option>
+
+            <option value="3">重要</option>
+
+            </select>
+
+            <a class="related-widget-wrapper-link change-related" id="change_id_msg_type"
+                data-href-template="/admin/msg/msgtype/__fk__/change/?_to_field=id&amp;_popup=1"
+                title="更改选中的msg type"><img src="/static/admin/img/icon-changelink.svg" alt="修改"></a><a class="related-widget-wrapper-link add-related" id="add_id_msg_type"
+                href="/admin/msg/msgtype/add/?_to_field=id&amp;_popup=1"
+                title="增加另一个 msg type"><img src="/static/admin/img/icon-addlink.svg" alt="增加"></a>
+
+            </div>
+
+
+
+                    </div>
+
+            </div>
+            <div class="form-row field-unit">
+
+
+                    <div>
+
+
+                            <label class="required" for="id_unit">Unit:</label>
+
+                                <input type="text" name="unit" class="vTextField" maxlength="10" required id="id_unit">
+
+
+
+                    </div>
+
+            </div>
+            <div class="form-row field-created_time">
+
+
+                    <div>
+
+
+                            <label class="required" for="id_created_time_0">Created time:</label>
+
+                                <p class="datetime">
+            日期： <input type="text" name="created_time_0" class="vDateField" size="10" required id="id_created_time_0">
+
+            <br>
+            时间： <input type="text" name="created_time_1" class="vTimeField" size="8" required id="id_created_time_1">
+
+
+            </p>
+
+
+
+                    </div>
+
+            </div>
+            <div class="form-row field-Operator">
+
+
+                    <div>
+
+
+                            <label class="required" for="id_Operator">Operator:</label>
+
+                                <div class="related-widget-wrapper">
+            <select name="Operator" required id="id_Operator">
+            <option value="" selected>---------</option>
+
+            <option value="1">liux</option>
+
+            <option value="9">xx5238300</option>
+
+            </select>
+
+            <a class="related-widget-wrapper-link change-related" id="change_id_Operator"
+                data-href-template="/admin/auth/user/__fk__/change/?_to_field=id&amp;_popup=1"
+                title="更改选中的用户"><img src="/static/admin/img/icon-changelink.svg" alt="修改"></a><a class="related-widget-wrapper-link add-related" id="add_id_Operator"
+                href="/admin/auth/user/add/?_to_field=id&amp;_popup=1"
+                title="增加另一个 用户"><img src="/static/admin/img/icon-addlink.svg" alt="增加"></a>
+
+            </div>
+
+
+
+                    </div>
+
+            </div>
+            <div class="form-row field-commander">
+
+
+                    <div>
+
+
+                            <label class="required" for="id_commander">Commander:</label>
+
+                                <input type="text" name="commander" class="vTextField" maxlength="5" required id="id_commander">
+
+
+
+                    </div>
+
+            </div>
+            <div class="form-row field-commander_phone">
+                <div>
+                    <label class="required" for="id_commander_phone">Commander phone:</label>
+                    <input type="text" name="commander_phone" class="vTextField" maxlength="15" required id="id_commander_phone">
+                </div>
+            </div>
+            <div class="form-row field-chief_duty">
+                    <div>
+                        <label class="required" for="id_chief_duty">Chief duty:</label>
+                        <input type="text" name="chief_duty" class="vTextField" maxlength="5" required id="id_chief_duty">
+                    </div>
+
+            </div>
+            <div class="form-row field-chief_phone">
+                <div>
+                    <label class="required" for="id_chief_phone">Chief phone:</label>
+                    <input type="text" name="chief_phone" class="vTextField" maxlength="15" required id="id_chief_phone">
+                </div>
+            </div>
+            <div class="form-row field-operator">
+                <div>
+                    <label class="required" for="id_operator">Operator:</label>
+                    <input type="text" name="operator" class="vTextField" maxlength="5" required id="id_operator">
+                </div>
+            </div>
+            <div class="form-row field-operator_phone">
+                    <div>
+                        <label class="required" for="id_operator_phone">Operator phone:</label>
+                        <input type="text" name="operator_phone" class="vTextField" maxlength="15" required id="id_operator_phone">
+                    </div>
+                </div>
+            <div class="form-row field-police_duty">
+                <div>
+                    <label class="required" for="id_police_duty">Police duty:</label>
+                    <input type="text" name="police_duty" class="vTextField" maxlength="5" required id="id_police_duty">
+                </div>
+            </div>
+            <div class="form-row field-police_post">
+                <div>
+                    <label class="required" for="id_police_post">Police post:</label>
+                    <input type="text" name="police_post" class="vTextField" maxlength="5" required id="id_police_post">
+                </div>
+            </div>
+            <div class="form-row field-emergency_police">
+                <div>
+                    <label class="required" for="id_emergency_police">Emergency police:</label>
+                    <input type="text" name="emergency_police" class="vTextField" maxlength="5" required id="id_emergency_police">
+                </div>
+            </div>
+            <div class="form-row field-emergency_vehicle">
+                <div>
+                    <label class="required" for="id_emergency_vehicle">Emergency vehicle:</label>
+                    <input type="text" name="emergency_vehicle" class="vTextField" maxlength="5" required id="id_emergency_vehicle">
+                </div>
+            </div>
+            <div class="form-row field-external_transfer">
+                <div>
+                    <label class="required" for="id_external_transfer">External transfer:</label>
+                    <input type="text" name="external_transfer" class="vTextField" maxlength="5" required id="id_external_transfer">
+                </div>
+            </div>
+            <div class="form-row field-num_workers">
+                <div>
+                    <label class="required" for="id_num_workers">Num workers:</label>
+                    <input type="text" name="num_workers" class="vTextField" maxlength="5" required id="id_num_workers">
+                </div>
+            </div>
+            <div class="form-row field-training_all">
+                <div>
+                    <label class="required" for="id_training_all">Training all:</label>
+                    <input type="text" name="training_all" class="vTextField" maxlength="5" required id="id_training_all">
+                </div>
+            </div>
+            <div class="form-row field-training_day">
+                <div>
+                    <label class="required" for="id_training_day">Training day:</label>
+                    <input type="text" name="training_day" class="vTextField" maxlength="5" required id="id_training_day">
+                </div>
+            </div>p
+    
+        <div class="form-row field-confinement_all">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_confinement_all">Confinement all:</label>
+                        
+                            <input type="text" name="confinement_all" class="vTextField" maxlength="5" required id="id_confinement_all">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-confinement_day">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_confinement_day">Confinement day:</label>
+                        
+                            <input type="text" name="confinement_day" class="vTextField" maxlength="5" required id="id_confinement_day">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-isolation_all">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_isolation_all">Isolation all:</label>
+                        
+                            <input type="text" name="isolation_all" class="vTextField" maxlength="5" required id="id_isolation_all">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-isolation_day">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_isolation_day">Isolation day:</label>
+                        
+                            <input type="text" name="isolation_day" class="vTextField" maxlength="5" required id="id_isolation_day">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-death">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_death">Death:</label>
+                        
+                            <input type="text" name="death" class="vTextField" maxlength="5" required id="id_death">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-leave_and_back">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_leave_and_back">Leave and back:</label>
+                        
+                            <input type="text" name="leave_and_back" class="vTextField" maxlength="5" required id="id_leave_and_back">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-judicial_all">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_judicial_all">Judicial all:</label>
+                        
+                            <input type="text" name="judicial_all" class="vTextField" maxlength="5" required id="id_judicial_all">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-judicial_day">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_judicial_day">Judicial day:</label>
+                        
+                            <input type="text" name="judicial_day" class="vTextField" maxlength="5" required id="id_judicial_day">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-social_all">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_social_all">Social all:</label>
+                        
+                            <input type="text" name="social_all" class="vTextField" maxlength="5" required id="id_social_all">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-social_day">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_social_day">Social day:</label>
+                        
+                            <input type="text" name="social_day" class="vTextField" maxlength="5" required id="id_social_day">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-freed_people">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_freed_people">Freed people:</label>
+                        
+                            <input type="text" name="freed_people" class="vTextField" maxlength="5" required id="id_freed_people">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-parole">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_parole">Parole:</label>
+                        
+                            <input type="text" name="parole" class="vTextField" maxlength="5" required id="id_parole">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-reconfirm">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_reconfirm">Reconfirm:</label>
+                        
+                            <input type="text" name="reconfirm" class="vTextField" maxlength="5" required id="id_reconfirm">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-outside_prison">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_outside_prison">Outside prison:</label>
+                        
+                            <input type="text" name="outside_prison" class="vTextField" maxlength="5" required id="id_outside_prison">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-outside_prison_death">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_outside_prison_death">Outside prison death:</label>
+                        
+                            <input type="text" name="outside_prison_death" class="vTextField" maxlength="5" required id="id_outside_prison_death">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-charter">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_charter">Charter:</label>
+                        
+                            <input type="text" name="charter" class="vTextField" maxlength="5" required id="id_charter">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-detective_relatives_all">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_detective_relatives_all">Detective relatives all:</label>
+                        
+                            <input type="text" name="detective_relatives_all" class="vTextField" maxlength="5" required id="id_detective_relatives_all">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-detective_relatives_day">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_detective_relatives_day">Detective relatives day:</label>
+                        
+                            <input type="text" name="detective_relatives_day" class="vTextField" maxlength="5" required id="id_detective_relatives_day">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-police_on_post">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_police_on_post">Police on post:</label>
+                        
+                            <input type="text" name="police_on_post" class="vTextField" maxlength="5" required id="id_police_on_post">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-exotic_vehicle">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_exotic_vehicle">Exotic vehicle:</label>
+                        
+                            <input type="text" name="exotic_vehicle" class="vTextField" maxlength="5" required id="id_exotic_vehicle">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-video_alarm">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_video_alarm">Video alarm:</label>
+                        
+                            <input type="text" name="video_alarm" class="vTextField" maxlength="5" required id="id_video_alarm">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-perimeter_alarm">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_perimeter_alarm">Perimeter alarm:</label>
+                        
+                            <input type="text" name="perimeter_alarm" class="vTextField" maxlength="5" required id="id_perimeter_alarm">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-grid_alarm">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_grid_alarm">Grid alarm:</label>
+                        
+                            <input type="text" name="grid_alarm" class="vTextField" maxlength="5" required id="id_grid_alarm">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-violation_msg">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_violation_msg">Violation msg:</label>
+                        
+                            <div class="django-ckeditor-widget" data-field-id="id_violation_msg" style="display: inline-block;">
+    <textarea cols="40" id="id_violation_msg" name="violation_msg" rows="10" required data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Full&quot;, &quot;height&quot;: 291, &quot;width&quot;: 835, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;filebrowserUploadUrl&quot;: &quot;/ckeditorupload/&quot;, &quot;filebrowserBrowseUrl&quot;: &quot;/ckeditorbrowse/&quot;, &quot;language&quot;: &quot;zh-cn&quot;}" data-external-plugin-resources="[]" data-id="id_violation_msg" data-type="ckeditortype"></textarea>
+</div>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-leave_prison_msg">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_leave_prison_msg">Leave prison msg:</label>
+                        
+                            <div class="django-ckeditor-widget" data-field-id="id_leave_prison_msg" style="display: inline-block;">
+    <textarea cols="40" id="id_leave_prison_msg" name="leave_prison_msg" rows="10" required data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Full&quot;, &quot;height&quot;: 291, &quot;width&quot;: 835, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;filebrowserUploadUrl&quot;: &quot;/ckeditorupload/&quot;, &quot;filebrowserBrowseUrl&quot;: &quot;/ckeditorbrowse/&quot;, &quot;language&quot;: &quot;zh-cn&quot;}" data-external-plugin-resources="[]" data-id="id_leave_prison_msg" data-type="ckeditortype"></textarea>
+</div>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-important_msg">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_important_msg">Important msg:</label>
+                        
+                            <div class="django-ckeditor-widget" data-field-id="id_important_msg" style="display: inline-block;">
+    <textarea cols="40" id="id_important_msg" name="important_msg" rows="10" required data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Full&quot;, &quot;height&quot;: 291, &quot;width&quot;: 835, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;filebrowserUploadUrl&quot;: &quot;/ckeditorupload/&quot;, &quot;filebrowserBrowseUrl&quot;: &quot;/ckeditorbrowse/&quot;, &quot;language&quot;: &quot;zh-cn&quot;}" data-external-plugin-resources="[]" data-id="id_important_msg" data-type="ckeditortype"></textarea>
+</div>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-emergencies_msg">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_emergencies_msg">Emergencies msg:</label>
+                        
+                            <div class="django-ckeditor-widget" data-field-id="id_emergencies_msg" style="display: inline-block;">
+    <textarea cols="40" id="id_emergencies_msg" name="emergencies_msg" rows="10" required data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Full&quot;, &quot;height&quot;: 291, &quot;width&quot;: 835, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;filebrowserUploadUrl&quot;: &quot;/ckeditorupload/&quot;, &quot;filebrowserBrowseUrl&quot;: &quot;/ckeditorbrowse/&quot;, &quot;language&quot;: &quot;zh-cn&quot;}" data-external-plugin-resources="[]" data-id="id_emergencies_msg" data-type="ckeditortype"></textarea>
+</div>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-disposal_msg">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_disposal_msg">Disposal msg:</label>
+                        
+                            <div class="django-ckeditor-widget" data-field-id="id_disposal_msg" style="display: inline-block;">
+    <textarea cols="40" id="id_disposal_msg" name="disposal_msg" rows="10" required data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: &quot;Full&quot;, &quot;height&quot;: 291, &quot;width&quot;: 835, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;filebrowserUploadUrl&quot;: &quot;/ckeditorupload/&quot;, &quot;filebrowserBrowseUrl&quot;: &quot;/ckeditorbrowse/&quot;, &quot;language&quot;: &quot;zh-cn&quot;}" data-external-plugin-resources="[]" data-id="id_disposal_msg" data-type="ckeditortype"></textarea>
+</div>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="submit-row">
+
+<input type="submit" value="保存" class="default" name="_save">
+
+
+<input type="submit" value="保存并增加另一个" name="_addanother">
+<input type="submit" value="保存并继续编辑" name="_continue">
+
+
+</div>
+
+
+
+    <script type="text/javascript"
+            id="django-admin-form-add-constants"
+            src="/static/admin/js/change_form.js"
+            
+                data-model-name="msg"
+            >
+    </script>
+
+
+
+
+<script type="text/javascript"
+        id="django-admin-prepopulated-fields-constants"
+        src="{% static 'admin/js/prepopulate_init.js' %}"
+        data-prepopulated-fields="[]">
+</script>
+
+
+</div>
+</form></div>
+
+        
+        <br class="clear">
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+
+</body>
+</html>

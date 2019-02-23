@@ -1,0 +1,108 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+
+{% block title %}
+    综合信息系统|首页
+{% endblock %}
+
+{% block header_extends %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <script src="{% static 'bootstrap-3.37/js/highcharts_7.0.2.js' %}"></script>
+{% endblock %}
+
+{% block nav_home_active %}active{% endblock %}
+
+{% block content %}
+    {# 图表容器 DOM #}
+    <div id="container"></div>
+    {# 图表配置 #}
+{#    <div class="hot-data">#}
+        {# 今天24小时内查阅次数最多的数据 #}
+{#        <h3>今日最高查阅</h3>#}
+{#        <ul>#}
+{#            {% for hot_data in today_hot_data %}#}
+{#                <li>#}
+{#                    <a href="{% url 'msg_detail' hot_data.content_object.pk %}">#}
+{#                        {{ hot_data.created_time|date:'Y-m-d' }}#}
+{#                    </a>#}
+{#                    信息#}
+{#                    ({{ hot_data.read_num }})#}
+{#                </li>#}
+
+{#            {% empty %}#}
+{#                <li>今日暂无数据</li>#}
+{#            {% endfor %}#}
+{#        </ul>#}
+    </div>
+{#    <div class="hot-data">#}
+        {# #}
+{#        <h3>昨日最高查阅</h3>#}
+{#        <ul>#}
+{#            {% for hot_data in yesterday_hot_data %}#}
+{#                <li>#}
+{#                    <a href="{% url 'msg_detail' hot_data.content_object.pk %}">#}
+{#                        {{ hot_data.created_time|date:'Y-m-d' }}#}
+{#                    </a>#}
+{#                    信息#}
+{#                    ({{ hot_data.read_num }})#}
+{#                </li>#}
+{##}
+{#            {% empty %}#}
+{#                <li>昨日暂无数据</li>#}
+{#            {% endfor %}#}
+{#        </ul>#}
+{#    </div>#}
+{#    <div class="hot-data">#}
+{#        <h3>7日内统计</h3>#}
+{#        <ul>#}
+{#            {% for hot_msg in hot_msgs_7days %}#}
+{#                <li>#}
+{#                    <a href="{% url 'msg_detail' hot_msg.id %}">#}
+{#                        {{ hot_msg.created_time|date:'Y-m-d' }}#}
+{#                    </a>#}
+{#                    信息#}
+{#                    ({{ hot_msg.read_num_sum }})#}
+{#                </li>#}
+{##}
+{#            {% empty %}#}
+{#                <li>最近7日暂无数据</li>#}
+{#            {% endfor %}#}
+{#        </ul>#}
+{#    </div>#}
+{##}
+    <script>
+    var options = {
+        chart:{ type:'line' },
+        title:{ text: null },
+        xAxis:{
+            categories: {{ dates|safe }},
+            tickmarkPlacement: 'on',
+            title:{ text:'前7日数据查询统计' }
+        },
+        yAxis:{
+            title: { text: null },
+            labels:{ enabled: false }, {# 去掉坐标轴 #}
+            gridLineDashStyle: 'Dash', {# 网格虚线，不设置为实线 #}
+        },
+        series:[{
+            name:'查阅次数',
+            data:{{ read_nums }}
+        }],
+        plotOptions:{  {# 开启数据标签 #}
+            line:{
+                dataLabels:{enabled:true}
+            }
+        },
+        legend:{ enabled: false }, {# 去掉图例 #}
+        credits: { enabled:false }, {# 去掉版权信息 #}
+    };
+    {# 图表初始化函数 #}
+    var chart = Highcharts.chart('container', options);
+
+    </script>
+
+    {% csrf_token %} {# 验证令牌，不写登陆会报错 #}
+    <h1 class="homeText">欢迎使用综合信息系统</h1>
+
+    <h4 class="homeText">数据分页查看，请点击<a href="{% url 'msg_list' %}">&nbsp;进入</a></h4>
+{% endblock %}

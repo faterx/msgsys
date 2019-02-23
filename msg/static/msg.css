@@ -1,0 +1,74 @@
+ul.msg-types {
+    list-style-type: none;
+}
+
+div.msg:not(:last-child) {
+    margin-top: 2em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #eee;
+}
+
+div.msg h3 {
+    /*根据不同屏幕有不同的效果*/
+    max-width: 250px;
+}
+
+div.paginator {
+    text-align: center;
+}
+
+div.msg p.msg-info {
+    margin-bottom: 0;
+}
+
+ul.msg-info-description {
+    list-style-type: none;
+    margin-bottom: 1em;
+}
+
+ul.msg-info-description li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+div.msg-more {
+    margin-top: 1em;
+}
+
+/*div.container {*/
+    /*text-align: center;*/
+/*}*/
+
+div.comment-area-title {
+    margin-top: 2em;
+}
+h3.comment-area-title {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.4em;
+}
+
+div.django-ckeditor-widget {
+    width: 100%;
+}
+
+div.comment {
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+}
+div.reply {
+    margin-left: 2em;
+}
+
+div#reply_content_container {
+    border: 1px solid #d1d1d1;
+    border-bottom: none;
+    background-color: #f8f8f8;
+    overflow: hidden;
+    padding: 1em 1em 0.5em;
+}
+
+p#reply_title {
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 0.5em;
+}

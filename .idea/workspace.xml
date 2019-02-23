@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1038dcc1-841c-4927-ac32-8a679892f807" name="默认更改列表" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/msgsys$models.coverage" NAME="models Coverage Results" MODIFIED="1550763810244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/msg" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="msgsys" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/msgsys/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="35" column="56" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#629#1" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/msgsys/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="150" column="68" selection-start-line="150" selection-start-column="68" selection-end-line="150" selection-end-column="68" />
+              <folding>
+                <element signature="e#41#65#0" expanded="true" />
+                <element signature="e#3057#6565#1" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/msgsys/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="83">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#3070#3435#1" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/msg_write.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>table</find>
+      <find>render_to_response</find>
+      <find>render_to_response(</find>
+      <find>login</find>
+      <find>policeCode</find>
+      <find>DO_NOTHING</find>
+      <find>on_delete=models.DO_NOTHING</find>
+      <find>Operationa</find>
+      <find>form</find>
+      <find>Operator</find>
+      <find>form-control</find>
+      <find>date</find>
+      <find>create()</find>
+      <find>djang.core</find>
+      <find>ForeignKey</find>
+      <find>police_on_post</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>render</replace>
+      <replace>render(request,</replace>
+      <replace>CA</replace>
+      <replace>on_delete=models.CASCADE</replace>
+      <replace>form-inline</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\pyobj\lxpcm\msgsys</dir>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/read_statistics/utils.py" />
+        <option value="$PROJECT_DIR$/comment/urls.py" />
+        <option value="$PROJECT_DIR$/templates/error.html" />
+        <option value="$PROJECT_DIR$/msgsys/froms.py" />
+        <option value="$PROJECT_DIR$/static/home.css" />
+        <option value="$PROJECT_DIR$/templates/register.html" />
+        <option value="$PROJECT_DIR$/msg/static/openwin.js" />
+        <option value="$PROJECT_DIR$/comment/templatetags/comment_tags.py" />
+        <option value="$PROJECT_DIR$/msg/views.py" />
+        <option value="$PROJECT_DIR$/comment/views.py" />
+        <option value="$PROJECT_DIR$/msg/static/msg.css" />
+        <option value="$PROJECT_DIR$/comment/admin.py" />
+        <option value="$PROJECT_DIR$/comment/models.py" />
+        <option value="$PROJECT_DIR$/msg/templates/msg/msg_detail.html" />
+        <option value="$PROJECT_DIR$/msg/templates/msg/msg_write.html" />
+        <option value="$PROJECT_DIR$/comment/froms.py" />
+        <option value="$PROJECT_DIR$/msg/templates/msg/msg_with_type.html" />
+        <option value="$PROJECT_DIR$/templates/home.html" />
+        <option value="$PROJECT_DIR$/templates/text.html" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/msg/templates/msg/msg_list.html" />
+        <option value="$PROJECT_DIR$/templates/test.html" />
+        <option value="$PROJECT_DIR$/static/add.css" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/django/db/models/manager.py" />
+        <option value="$PROJECT_DIR$/msg/adminx.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/models.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/views/base.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/views/list.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/views/dashboard.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/bookmark.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/filters.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/relate.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/details.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/topnav.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/passwords.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/language.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/sortablelist.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/importexport.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/util.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/sites.py" />
+        <option value="D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/views/website.py" />
+        <option value="$PROJECT_DIR$/read_statistics/admin.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/msg/admin.py" />
+        <option value="$PROJECT_DIR$/templates/msg_write_old1.html" />
+        <option value="$PROJECT_DIR$/msgsys/settings.py" />
+        <option value="$PROJECT_DIR$/templates/msg_write.html" />
+        <option value="$PROJECT_DIR$/msg/models.py" />
+        <option value="$PROJECT_DIR$/msgsys/urls.py" />
+        <option value="$PROJECT_DIR$/msgsys/views.py" />
+        <option value="$PROJECT_DIR$/msgsys/forms.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="643" />
+    <option name="width" value="1288" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="msgsys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msgsys" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msgsys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msgsys" type="462c0819:PsiDirectoryNode" />
+              <item name="msg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msgsys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msgsys" type="462c0819:PsiDirectoryNode" />
+              <item name="msgsys" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msgsys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msgsys" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msgsys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msgsys" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap-3.37" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msgsys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msgsys" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap-3.37" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="msgsys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="msgsys" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyFindUsagesOptions">
+    <option name="isSearchForTextOccurrences" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pyobj\lxpcm\msgsys\static\bootstrap-3.37\js" />
+      <recent name="D:\pyobj\lxpcm\msgsys\static\bootstrap-3.37\css" />
+      <recent name="D:\pyobj\lxpcm\msgsys" />
+      <recent name="$PROJECT_DIR$/comment/templatetags" />
+      <recent name="D:\pyobj\lxpcm\msgsys\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\pyobj\lxpcm\msgsys\templates" />
+      <recent name="D:\pyobj\lxpcm\msgsys\msg\static" />
+      <recent name="D:\pyobj\lxpcm\msgsys\msg\static\msg" />
+      <recent name="D:\pyobj\lxpcm\msgsys\msg\templates\msg" />
+      <recent name="D:\pyobj\lxpcm\msgsys\msg\templates" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Django server.msgsys">
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="msgsys" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/msg" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/msg/models.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="msgsys" type="Python.DjangoServer" factoryName="Django server">
+      <module name="msgsys" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="msgsys.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.models" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1038dcc1-841c-4927-ac32-8a679892f807" name="默认更改列表" comment="" />
+      <created>1548918992624</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1548918992624</updated>
+      <workItem from="1548918995705" duration="4331000" />
+      <workItem from="1548940914907" duration="8462000" />
+      <workItem from="1548984849337" duration="316000" />
+      <workItem from="1549004179447" duration="7176000" />
+      <workItem from="1549027058648" duration="9136000" />
+      <workItem from="1549072413092" duration="19404000" />
+      <workItem from="1549116241370" duration="7908000" />
+      <workItem from="1549155529913" duration="5745000" />
+      <workItem from="1549165252832" duration="702000" />
+      <workItem from="1549188777017" duration="56000" />
+      <workItem from="1549189010272" duration="21627000" />
+      <workItem from="1549332677703" duration="25363000" />
+      <workItem from="1549784715839" duration="9304000" />
+      <workItem from="1549850450007" duration="21085000" />
+      <workItem from="1549895568612" duration="2213000" />
+      <workItem from="1549942071153" duration="15326000" />
+      <workItem from="1549978002216" duration="5684000" />
+      <workItem from="1550020228138" duration="12151000" />
+      <workItem from="1550065394431" duration="6556000" />
+      <workItem from="1550106588598" duration="11375000" />
+      <workItem from="1550125573232" duration="1853000" />
+      <workItem from="1550132722776" duration="207000" />
+      <workItem from="1550154571071" duration="3128000" />
+      <workItem from="1550192960619" duration="9086000" />
+      <workItem from="1550212647742" duration="10434000" />
+      <workItem from="1550675344763" duration="1428000" />
+      <workItem from="1550711176707" duration="16035000" />
+      <workItem from="1550755691476" duration="28958000" />
+      <workItem from="1550894439263" duration="9809000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="274858000" />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="643" y="0" width="1288" height="1047" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19625407" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="DB Browser" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" weight="0.32962963" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32946634" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34157303" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32946634" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="DB Execution Console" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32946634" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.38167053" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="调试" order="13" />
+      <window_info anchor="bottom" id="Python Console" order="14" weight="0.32946634" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.3295063" />
+      <window_info anchor="bottom" id="manage.py@msgsys" order="16" weight="0.23483147" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.2607296" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.17690192" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="DB Browser" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" weight="0.32962963" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32946634" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3723898" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32946634" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="DB Execution Console" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.38167053" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="调试" order="13" />
+      <window_info anchor="bottom" id="Python Console" order="14" weight="0.32946634" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.3295063" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.2607296" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/django/contrib/admin/sites.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="516" lean-forward="true" selection-start-line="516" selection-end-line="516" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/django/contrib/admin/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="48" lean-forward="true" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/django/contrib/admin/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bootstrap-3.37/js/locales/bootstrap-datetimepicker.ar.js" />
+    <entry file="file://$PROJECT_DIR$/static/bootstrap-3.37/css/bootstrap-datetimepicker.css" />
+    <entry file="file://$PROJECT_DIR$/templates/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1253">
+          <caret line="246" column="19" selection-start-line="246" selection-start-column="19" selection-end-line="246" selection-end-column="19" />
+          <folding>
+            <element signature="e#2484#2492#0#HTML" expanded="true" />
+            <element signature="e#2523#2531#0#HTML" expanded="true" />
+            <element signature="e#2567#2575#0#HTML" expanded="true" />
+            <element signature="e#2992#4151#0#HTML" />
+            <element signature="e#4165#4623#0#HTML" />
+            <element signature="e#4637#5284#0#HTML" />
+            <element signature="e#5298#6417#0#HTML" />
+            <element signature="e#6431#6913#0#HTML" />
+            <element signature="e#6927#7440#0#HTML" />
+            <element signature="e#7454#7941#0#HTML" />
+            <element signature="e#7955#8448#0#HTML" />
+            <element signature="e#8038#8420#0#HTML" />
+            <element signature="e#8462#8939#0#HTML" />
+            <element signature="e#8542#8911#0#HTML" />
+            <element signature="e#8953#9461#0#HTML" />
+            <element signature="e#9475#9967#0#HTML" />
+            <element signature="e#9981#10473#0#HTML" />
+            <element signature="e#10487#11004#0#HTML" />
+            <element signature="e#11018#11540#0#HTML" />
+            <element signature="e#25825#25855#0#HTML" expanded="true" />
+            <element signature="e#27537#27567#0#HTML" expanded="true" />
+            <element signature="e#29246#29276#0#HTML" expanded="true" />
+            <element signature="e#30954#30984#0#HTML" expanded="true" />
+            <element signature="e#32656#32686#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/base.css" />
+    <entry file="file://$PROJECT_DIR$/static/home.css" />
+    <entry file="file://$PROJECT_DIR$/static/add.css" />
+    <entry file="file://$PROJECT_DIR$/static/bootstrap-3.37/js/bootstrap.min.js" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/django/db/models/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="410" column="24" lean-forward="true" selection-start-line="410" selection-start-column="24" selection-end-line="410" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/django/db/models/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment/urls.py" />
+    <entry file="file://$PROJECT_DIR$/read_statistics/utils.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/importlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3125">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+          <folding>
+            <element signature="e#604#673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/__init__.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/apps.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/views/list.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/models.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/bookmark.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/views/dashboard.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/relate.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/details.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/passwords.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/topnav.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/filters.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/language.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/sortablelist.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/django/conf/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/plugins/importexport.py" />
+    <entry file="file://$PROJECT_DIR$/msg/adminx.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/views/base.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/util.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/sites.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/xadmin/views/website.py" />
+    <entry file="file://$PROJECT_DIR$/read_statistics/admin.py" />
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="146" column="8" selection-start-line="146" selection-start-column="8" selection-end-line="146" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_statistics/models.py" />
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1650" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Anaconda3/envs/msgsys/Lib/site-packages/django/forms/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="265" selection-start-line="265" selection-end-line="265" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msg/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msg/templates/msg/msg_list.html" />
+    <entry file="file://$PROJECT_DIR$/msgsys/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-332">
+          <caret line="110" column="6" lean-forward="true" selection-start-line="110" selection-start-column="6" selection-end-line="110" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/msg_write_old1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msg/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+          <folding>
+            <element signature="e#321#2303#0" />
+            <element signature="e#2333#2499#0" />
+            <element signature="e#2547#2818#0" />
+            <element signature="e#2867#3136#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msg/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/msg_write.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msgsys/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="35" column="56" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#629#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msgsys/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#3070#3435#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msgsys/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="150" column="68" selection-start-line="150" selection-start-column="68" selection-end-line="150" selection-end-column="68" />
+          <folding>
+            <element signature="e#41#65#0" expanded="true" />
+            <element signature="e#3057#6565#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,399 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ msg.created_time }}{% endblock %}
+
+{% block nav_msg_active %}active{% endblock %}
+
+{% load staticfiles %}
+
+{% load comment_tags %}
+
+{% block header_extends %}
+    <link rel="stylesheet" href="{% static 'msg.css' %}">
+    <script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+    <script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-xs-offset-0">
+                <h3 style="text-align: center">
+                    贵州省监狱系统指挥中心值班综合信息日报<br>
+                    {{ msg.created_time|date:'Y年m月d日' }}数据
+                </h3>
+                <ul class="msg-info-description">
+                    <li><h5><b>录入单位：</b>{{ msg.unit }}</h5></li>
+                    <li>
+                        <h5><b>信息类别：</b>
+                        <a href="{% url 'msg_whit_type' msg.msg_type.pk %}">
+                            {{ msg.msg_type }}
+                        </a>
+                        </h5>
+                    </li>
+                    <li><h5><b>录入时间：</b>{{ msg.created_time|date:'Y年m月d日' }}</h5></li>
+                    <li><h5><b>录入人员：</b>{{ msg.Operator }}</h5></li>
+                    <li><h5><b>查阅次数：</b>({{ msg.get_read_num }})</h5></li>
+                    <li><h5><b>回复：</b>({% get_comment_count msg %})</h5></li>
+                </ul>
+
+                <table class="table table-hover table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th colspan="4" style="display:table-cell; vertical-align:middle; text-align: center;">民警动态数据</th>
+                            <th colspan="22" style="display:table-cell; vertical-align:middle; text-align: center;">罪犯动态数据</th>
+                            <th colspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">外来人员车辆数据</th>
+                            <th colspan="3" style="display:table-cell; vertical-align:middle; text-align: center;">安防设备报警数据</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="3" style="display:table-cell; vertical-align:middle; text-align: center;">在岗民警人数</th>
+                            <th rowspan="3" style="display:table-cell; vertical-align:middle; text-align: center;">值班民警人数</th>
+                            <th rowspan="3" style="display:table-cell; vertical-align:middle; text-align: center;">应急民警人数</th>
+                            <th rowspan="3" style="display:table-cell; vertical-align:middle; text-align: center;">应急车辆数</th>
+                            <th style="display:table-cell; vertical-align:middle; text-align: center;">入监</th>
+                            <th colspan="8" style="display:table-cell; vertical-align:middle; text-align: center;">监内</th>
+                            <th colspan="13" style="display:table-cell; vertical-align:middle; text-align: center;">出监</th>
+                            <th rowspan="3" style="display:table-cell; vertical-align:middle; text-align: center;">外来人员进监</th>
+                            <th rowspan="3" style="display:table-cell; vertical-align:middle; text-align: center;">外来车辆进监</th>
+                            <th rowspan="3" style="display:table-cell; vertical-align:middle; text-align: center;">视频事件报警</th>
+                            <th rowspan="3" style="display:table-cell; vertical-align:middle; text-align: center;">周界报警</th>
+                            <th rowspan="3" style="display:table-cell; vertical-align:middle; text-align: center;">电网报警</th>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">外系统(省)送入新收押犯数</th>
+                            <th rowspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">出工人数</th>
+                            <th colspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">集训教育</th>
+                            <th colspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">禁闭</th>
+                            <th colspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">隔离审查</th>
+                            <th rowspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">罪犯死亡</th>
+                            <th rowspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">离监就医当日返监</th>
+                            <th colspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">司法警察医院住院</th>
+                            <th colspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">社会医院住院</th>
+                            <th rowspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">刑满释放</th>
+                            <th rowspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">假释出监</th>
+                            <th rowspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">解回再审</th>
+                            <th rowspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">暂予监外执行</th>
+                            <th rowspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">监外执行罪犯死亡</th>
+                            <th rowspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">特许离监</th>
+                            <th colspan="2" style="display:table-cell; vertical-align:middle; text-align: center;">离监探亲</th>
+                        </tr>
+
+                        <tr>
+                            <th style="display:table-cell; vertical-align:middle; text-align: center;">全监总数</th>
+                            <th style="display:table-cell; vertical-align:middle; text-align: center;">当日发生</th>
+                            <th style="display:table-cell; vertical-align:middle; text-align: center;">全监总数</th>
+                            <th style="display:table-cell; vertical-align:middle; text-align: center;">当日发生</th>
+                            <th style="display:table-cell; vertical-align:middle; text-align: center;">全监总数</th>
+                            <th style="display:table-cell; vertical-align:middle; text-align: center;">当日发生</th>
+                            <th style="display:table-cell; vertical-align:middle; text-align: center;">全监总数</th>
+                            <th style="display:table-cell; vertical-align:middle; text-align: center;">当日发生</th>
+                            <th style="display:table-cell; vertical-align:middle; text-align: center;">全监总数</th>
+                            <th style="display:table-cell; vertical-align:middle; text-align: center;">当日发生</th>
+                            <th style="display:table-cell; vertical-align:middle; text-align: center;">全监总数</th>
+                            <th style="display:table-cell; vertical-align:middle; text-align: center;">当日发生</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.police_duty }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.police_post }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.emergency_police }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.emergency_vehicle }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.external_transfer }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.num_workers }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.training_all }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.training_day }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.confinement_all }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.confinement_day }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.isolation_all }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.isolation_day }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.death }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.leave_and_back }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.judicial_all }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.judicial_day }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.social_all }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.social_day }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.freed_people }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.parole }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.reconfirm }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.outside_prison }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.outside_prison_death }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.charter }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.detective_relatives_all }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.detective_relatives_day }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.police_on_post }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.exotic_vehicle }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.video_alarm }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.perimeter_alarm }}</td>
+                            <td style="display:table-cell; vertical-align:middle; text-align: center;">{{ msg.grid_alarm }}</td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="31" style="text-align: center">动态信息</th>
+                        </tr>
+
+                        <tr>
+                            <td colspan="4">违规违纪信息</td>
+                            <td colspan="27">{{ msg.violation_msg|striptags }}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">罪犯出监信息</td>
+                            <td colspan="27">{{ msg.leave_prison_msg|striptags }}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">其他重要信息</td>
+                            <td colspan="27">{{ msg.important_msg|striptags }}</td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="31" style="text-align: center">应急信息</th>
+                        </tr>
+
+                        <tr>
+                            <td colspan="4">突发事件</td>
+                            <td colspan="27">{{ msg.emergencies_msg|striptags }}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">处置状态</td>
+                            <td colspan="27">{{ msg.disposal_msg|striptags }}</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">值班员：</td>
+                            <td colspan="2">{{ msg.operator }}</td>
+                            <td colspan="3">联系电话：</td>
+                            <td colspan="4">{{ msg.operator_phone }}</td>
+                            <td colspan="2">值班长：</td>
+                            <td colspan="2">{{ msg.chief_duty }}</td>
+                            <td colspan="3">联系电话：</td>
+                            <td colspan="4">{{ msg.chief_phone }}</td>
+                            <td colspan="2">指挥长：</td>
+                            <td colspan="2">{{ msg.commander }}</td>
+                            <td colspan="2">联系电话：</td>
+                            <td colspan="4">{{ msg.commander_phone }}</td>
+                        </tr>
+                    </tbody>
+
+{#                    <tr>#}
+{#                        <td colspan="15">最后修改时间：{{ msg.last_updated_time|date:'Y年m月d日 H:i:s' }}</td>#}
+{#                        <td colspan="16">最后修改用户：{{ msg.Operator }}</td>#}
+{#                    </tr>#}
+
+                </table>
+
+{#                    <button type="button" value="附件上传">上传附件</button> 待建中#}
+{#                    <hr>#}
+
+                <div class="msg-more">
+                    <p>上一条信息：
+                        {% if previous_msg %}
+                            <a href="{% url 'msg_detail' previous_msg.pk %}">
+                                {{ previous_msg.created_time|date:'Y年m月d日' }}信息
+                            </a>
+                        {% else %}
+                            已经最新了！
+                        {% endif %}
+                    </p>
+                    <p>下一条信息：
+                        {% if next_msg %}
+                            <a href="{% url 'msg_detail' next_msg.pk %}">
+                                {{ next_msg.created_time|date:'Y年m月d日' }}信息
+                            </a>
+                        {% else %}
+                            已经是最有一页了！
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-xs-offset-0">
+                <div class="comment-area">
+                    <h3 class="comment-area-title">提交意见</h3>
+                    {% if user.is_authenticated %}
+                        <form id="comment_form" action=
+                                "{% url 'update_comment' %}"
+                               method="post" style="overflow: hidden">
+                            <label>{{ user.username }},意见内容：</label>
+                            {# 将评论内容显示到编辑框之上 #}
+                            <div id="reply_content_container" style="display:
+                            none;">
+                                <p id="reply_title">回复：</p>
+                                <div id="reply_content">
+
+                                </div>
+                            </div>
+                            {% csrf_token %}
+                            {% get_comment_form msg  %}
+                            <span id="comment_error" class="text-danger pull-left
+">
+
+                            </span>
+                            <input type="submit" value="提交" class="btn
+                            btn-primary pull-right" style="float: right">
+                        </form>
+                    {% else %}
+                        您尚未登陆，请先登陆！
+                        <a class="btn btn-primary" href="{% url 'login' %}?from={{ request.get_full_path }}">登陆</a>
+                        <span>or</span>
+                        <a class="btn btn-danger" href="{% url 'register' %}?from={{ request.get_full_path }}">注册</a>
+                    {% endif %}
+                </div>
+                <div class="comment-area">
+                    <h3 class="comment-area-title">意见列表</h3>
+                    <div id="comment_list">
+                        {% get_comment_list msg as comments %}
+                        {% for comment in comments %}
+                            <div id="root_{{ comment.pk }}" class="comment">
+                                <span>
+                                    {{ comment.user.username }}
+                                </span>
+                                <span>
+                                    ({{ comment.comment_time|date:"Y-m-d H:i:s"}}):
+                                </span>
+
+                                <div id="comment_{{ comment.pk }}">
+                                    {{ comment.text|safe }}
+                                </div>
+                                <a href="javascript:reply({{ comment.pk }});">
+                                    回复
+                                </a>
+
+                                {# 取出所有相关的回复 #}
+
+                                    {% for reply in comment.root_comment.all %}
+                                        <div id="" class="reply">
+                                            <span>
+                                                {{ reply.user.username }}
+                                            </span>
+                                            <span>
+                                                ({{ reply.comment_time|date:"Y-m-d H:i:s" }}):
+                                            </span>
+
+                                            <span>回复：</span>
+                                            <span>
+                                                {{ reply.reply_to.username }}
+                                            </span>
+                                            <div id="comment_{{ reply.pk }}">
+                                                {{ reply.text|safe }}
+                                            </div>
+                                            <a href="javascript:reply({{ reply.pk }});">
+                                                回复
+                                            </a>
+                                        </div>
+                                    {% endfor %}
+                            </div>
+                        {% empty %}
+                            <span id="no_comment">暂无数据!~~</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script_extends %}
+    {# 异步提交数据，不刷新页面 #}
+    <script type="text/javascript">
+        function reply(reply_comment_id) {
+            // 设置值
+            $('#reply_comment_id').val(reply_comment_id);
+            var html = $('#comment_' + reply_comment_id).html();
+            $('#reply_content').html(html);
+            $('#reply_content_container').show();
+
+            $('html').animate({scrollTop: $('#comment_form').offset().top -
+                    60}, 300, function () {
+                CKEDITOR.instances['id_text'].focus();
+            });
+        }
+        
+        function numFormat(num) {
+            return ('00' + num).substr(-2);
+        }
+        
+        function timeFormat(timestamp) {
+            var datetime = new Date(timestamp * 1000);
+            var year = datetime.getFullYear();
+            var month = numFormat(datetime.getMonth() + 1);
+            var day = numFormat(datetime.getDate());
+            var hour = numFormat(datetime.getHours());
+            var minute = numFormat(datetime.getMinutes());
+            var second = numFormat(datetime.getSeconds());
+            return year + '-' + month + '-' + day + ' ' +
+                    hour + ':' + minute + ':' + second;
+        }
+    
+        {# $为选择器, #代表id #}
+        $("#comment_form").submit(function () {
+            // 清除错误信息
+            $('#comment_error').text('');
+            // 在页面中先判断回复内容是否为空，减小服务器压力
+            if (CKEDITOR.instances['id_text'].document.getBody().trim()=='') {
+                $('#comment_error').text('回复内容不能为空！');
+                return false;
+            }
+
+            // 更新数据到textarea里
+            CKEDITOR.instances['id_text'].updateElement();
+
+            // 异步提交
+            $.ajax({
+                url:'{% url 'update_comment' %}',  //提交地址
+                type: 'POST',  // 提交方式
+                data: $(this).serialize(),  //序列化
+                cache: false,  //是否需要缓存
+                success: function (data) {
+                    console.log(data);
+                    //判断数据是否处理成功，如果成功就提交
+                    if(data['status']=='SUCCESS'){
+                        // 异步提交后插入数据
+                        if ($('#reply_comment_id').val()=='0') {
+                            // 插入意见
+                            var comment_html = '<div id="root_'+ data['pk'] +
+                                '" class="comment"><span>' +
+                                    data['username'] + ' </span><span>(' +
+                                    timeFormat(data['comment_time']) +
+                                    '):</span><div id="comment_' +
+                                    data['pk'] + '">'+ data['text'] +
+                                    '</div><a href="javascript:reply(' +
+                                    data['pk'] + ');">回复</a></div>';
+                            $("#comment_list").prepend(comment_html);
+                        }else {
+                            // 插入回复
+
+                            var reply_html = '<div id="" class="reply"><span>'+
+                                data['username'] +' </span><span>('+
+                                timeFormat(data['comment_time']) + '):</span>' +
+                                '<span>回复：</span><span>' + data['reply_to'] +
+                                ':</span><div id="comment_' + data['pk']+
+                                '">'+ data['text'] +
+                                '</div><a href="javascript:reply('+
+                                data['pk'] + ');">回复</a></div>';
+                            $("#root_" + data['root_pk']).append(reply_html);
+                        }
+
+                        // 提交后清空文本框内的数据
+                        CKEDITOR.instances['id_text'].setData('');
+                        $('#reply_content_container').hide();
+                        $('#reply_comment_id').val('0');
+                        $('no_comment').remove();
+                        $('#comment_error').text('提交成功！');
+                    }else {
+                        // 显示错误信息
+                        $('#comment_error').text(data['message']);
+                    }
+
+                },
+                error: function (xhr) {
+                    console.log(xhr);
+                }
+            });
+            return false;
+        });
+
+    </script>
+{% endblock %}
